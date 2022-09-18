@@ -62,6 +62,24 @@ $ npm run test:cov
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
+## Changes for Netlify
+
+Add following packages
+
+1. npm install @netlify/functions
+2. npm install serverless-http
+3. npm install class-validator
+4. npm install class-transformer
+
+add script in package.json
+"postbuild": "rimraf dist/**.d.ts && rimraf dist/**.js.map",
+
+remove app. under src folder's root files
+
+add server.ts file in src folder
+
+add netlify.toml file
+
 ## Stay in touch
 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
